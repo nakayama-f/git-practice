@@ -1,3 +1,4 @@
+<%= flash[:notice2] %>
 <h1>Books</h1>
 
 <% @books.each do |book| %>
@@ -9,4 +10,4 @@
 
 <% end %>
 
-
+<%= link_to "Destroy" , book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>

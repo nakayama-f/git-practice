@@ -1,3 +1,18 @@
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<%elsif flash[:noti] %>
+  <div class="flash-noti">
+    <%= flash[:noti] %>
+  </div>
+<%elsif flash[:notice3] %>
+  <div class="flash-3">
+    <%= flash[:notice3] %>
+  </div>
+<% else %>
+  ;
+<% end %>
 
 <h2>Title:<h2>
 <p><%= @book.title %></p>
@@ -6,3 +21,4 @@
 <p><%= @book.body %></p>
 
 <%= link_to "Edit", edit_book_path(@book.id) %>
+
