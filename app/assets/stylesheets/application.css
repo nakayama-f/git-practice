@@ -21,18 +21,31 @@
   }
 
   body{
+    width:100%;
     margin:33px;
     line-height:18px;
     font-size:13px;
     font-family: verdana, arial, helvetica, sans-serif;
   }
   table{
-    border-spacing: 12px;
+    border-spacing: 10px;
+    width:100%;
   }
   h1{
     font-size:2em;
     font-weight:bold;
   }
+  
+  .alert{
+    border:solid 1px gray;
+  }
+  ul{
+    list-style-position: inside;
+  }
+  li{
+    text-align: center;
+  }
+  
   a {
     color: darkgray;
   }
