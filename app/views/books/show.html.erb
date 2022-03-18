@@ -1,18 +1,4 @@
-<% if flash[:notice] %>
-  <div class="flash">
-    <%= flash[:notice] %>
-  </div>
-<%elsif flash[:noti] %>
-  <div class="flash-noti">
-    <%= flash[:noti] %>
-  </div>
-<%elsif flash[:notice3] %>
-  <div class="flash-3">
-    <%= flash[:notice3] %>
-  </div>
-<% else %>
-  ;
-<% end %>
+<P><%= notice %></P>
 
 <h2>Title:<h2>
 <p><%= @book.title %></p>
