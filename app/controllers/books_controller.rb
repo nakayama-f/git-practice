@@ -11,11 +11,12 @@ class BooksController < ApplicationController
     @book = Book.new
   end
   def create
+    @books = Book.all.order(created_at: :desc)  
     @book2 = Book.new(book_params)
     if @book2.save
       redirect_to book_path(@book2.id), notice: 'Book was successfully created'
     else
-       render @books
+      render ("books/index")
     end
   end
 
@@ -28,7 +29,8 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       redirect_to book_path, notice: 'Book was successfully updated'
-    else :index
+    else 
+      render ("books/show")
 
     end
 

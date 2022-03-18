@@ -1,11 +1,16 @@
 <P><%= notice %></P>
-
-<h2>Title:<h2>
-<p><%= @book.title %></p>
-
-<h2>Body:<h2>
-<p><%= @book.body %></p>
-
+<br>
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+<br>
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+<br>
 <a><%= link_to "Edit", edit_book_path(@book.id) %></a>
+|
 <a><%= link_to :back , :back %></a>
 
