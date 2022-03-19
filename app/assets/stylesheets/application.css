@@ -21,33 +21,34 @@
   }
 
   body{
-    width:100%;
     margin:33px;
-    line-height:18px;
-    font-size:13px;
-    font-family: verdana, arial, helvetica, sans-serif;
   }
+  p{
+    font-size: 13px;
+    line-height: 4;
+    text-indent: 2em;
+
+  }
+
   table{
-    border-spacing: 10px;
-    width:100%;
+    border-collapse: separate;
+    border-spacing: 2;
   }
   h1{
-    font-size:2em;
+    font-size: 13px;
+    line-height: 1;
+    font-size:35px;
     font-weight:bold;
   }
-  
-  .alert{
-    border:solid 1px gray;
-  }
+
+
   ul{
     list-style-position: inside;
   }
-  li{
-    text-align: center;
-  }
-  
+
   a {
     color: darkgray;
+    margin-left: 12px;
   }
 
   a:hover {
