@@ -1,4 +1,14 @@
 <P><%= notice %></P>
+<% if @book.errors.any? %>
+  <div class="notice">
+    <h2>><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <br>
 <p>
   <strong>Title:</strong>
@@ -12,5 +22,5 @@
 <br>
 <a><%= link_to "Edit", edit_book_path(@book.id) %></a>
 |
-<a><%= link_to :back , :back %></a>
+<a><%= link_to :back , '/books' %></a>
 

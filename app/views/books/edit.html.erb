@@ -2,7 +2,7 @@
 <h1>Editing Book</h1>
 <% if @book.errors.any? %>
   <div class="notice">
-    <h2>><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+    <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,8 +10,6 @@
     </ul>
   </div>
 <% end %>
-<br>
-<br>
 <%= form_with model: @book do |f| %>
 
     <h4>Title</h4>
