@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all.order(created_at: :desc)
     @book_new = Book.new
+
   end
   def show
     @book = Book.find(params[:id])
