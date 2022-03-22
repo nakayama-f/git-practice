@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all.order(created_at: :desc)
+    @books = Book.all
     @book_new = Book.new
 
   end
@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     if @book_new.save
       redirect_to book_path(@book_new.id), notice: 'Book was successfully created'
     else
-      render ("books/index")
+      render :index
     end
   end
 
@@ -30,8 +30,7 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to book_path(@book.id), notice: 'Book was successfully updated'
     else
-      render ("books/edit")
-
+      render :edit
     end
 
   end
